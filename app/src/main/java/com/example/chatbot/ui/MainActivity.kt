@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
             delay(1000)
             withContext(Dispatchers.Main){
                 val response= BotResponse.basicResponses(message)
-                adapter.insertMessage(Message(message, RECEIVE_ID, timestamp))
+                adapter.insertMessage(Message(response, RECEIVE_ID, timestamp))
 
                 rv_messages.scrollToPosition(adapter.itemCount-1)
 
